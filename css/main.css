@@ -1,0 +1,11 @@
+
+.table{
+    visibility: hidden;
+}
+.checkbox{
+    text-align: center;
+}
+label{
+    width: 100%;
+}
+

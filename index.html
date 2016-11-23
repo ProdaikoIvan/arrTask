@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <label class="checkbox">
+                <input type="radio" name="html/consoleArrayTask" value="true" checked>
+                Console View
+            </label>
+            <label class="checkbox">
+                <input type="radio" name="html/consoleArrayTask" value="false">
+                HTML View
+            </label>
+            <p>
+                <button id="generateArray" class="btn btn-block" type="submit">Сгенерировать массив</button>
+            </p>
+            <table id="tableArray" class="table table-striped table-bordered">
+                <tbody id="resultArrayGenerate">
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-6">
+            <label class="checkbox">
+                <input type="radio" name="html/consoleTransportTask" value="true" checked>
+                Console View
+            </label>
+            <label class="checkbox">
+                <input type="radio" name="html/consoleTransportTask" value="false">
+                HTML View
+            </label>
+            <p>
+                <button id="solveTransportTask" class="btn btn-block">Решить транспортную задачу</button>
+            </p>
+            <table id="tableTransportTask" class="table table-striped table-bordered">
+                <tbody id="resultTransportTask">
+                </tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
