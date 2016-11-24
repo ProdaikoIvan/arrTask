@@ -201,15 +201,25 @@ function solutionTransportTask(flag) {
 function transportTaskViewHtml() {
     let dataTransportTask = solutionTransportTask();
     let tableViewTransportTaskHtml = document.getElementById("resultTransportTask");
-    document.getElementById('tableTransportTask').style.visibility = "visible";
-    for (let i = 0; i < dataTransportTask.length; i++) {
-        let tr = document.createElement('tr');
-        for (let j = 0; j < dataTransportTask[i].length; j++) {
-            let td = document.createElement('td');
-            td.innerHTML = dataTransportTask[i][j];
-            tr.appendChild(td);
+
+    removeChild(tableViewTransportTaskHtml);
+    createTable(tableViewTransportTaskHtml, dataTransportTask);
+
+    function removeChild(container) {
+        while (container.firstChild) {
+            container.removeChild(container.firstChild);
         }
-        tableViewTransportTaskHtml.appendChild(tr);
+    }
+    function createTable(container, data) {
+        container.style.visibility = "visible";
+        for (let i = 0; i < data.length; i++) {
+            let tr = document.createElement('tr');
+            for (let j = 0; j < data[i].length; j++) {
+                let td = document.createElement('td');
+                td.innerHTML = data[i][j];
+                tr.appendChild(td);
+            }
+            container.appendChild(tr);
+        }
     }
 }
-
